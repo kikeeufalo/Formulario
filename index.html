@@ -2,55 +2,72 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/divContainer.css">
+    <link rel="stylesheet" href="./CSS/stylesForm.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 </head>
 <body>
-    <div>
-        <div>
-            <h1>Candidatura a Emprego</h1>
-            <form action="">
-                <fieldset>
-                    <h2>Nome</h2>
-                    <input type="text">
-                    <input type="text">
-                </fieldset>
-                <fieldset>
-                    <h2>Data de nascimento</h2>
-                    <input type="date">
-                </fieldset>
-                <fieldset>
-                    <h2>Número de telefone</h2>
-                    <input type="number">
-                </fieldset>
-                <fieldset>
-                    <h2>Email</h2>
-                    <input type="email">
-                </fieldset>
-                <fieldset>
-                    <h2>Endereço</h2>
-                    <input type="text">
-                    <input type="text">
-                    <input type="number">
-                </fieldset>
-                <fieldset>
-                    <h2>Onde você ouviu sobre nós?</h2>
-                    <input type="checkbox">Mídia social
-                    <input type="checkbox">Anúncio de jornal
-                    <input type="checkbox">Anúncios digitais
-                    <input type="checkbox">Outros
-                </fieldset>
-                <fieldset>
-                    <h2>Descreva suas habilidades</h2>
-                    <textarea></textarea>
-                </fieldset>
-                <fieldset>
-                    <h2>Certificações</h2>
-                    <textarea></textarea>
-                </fieldset>
-            </form>
+    <div class="container">
+        <div class="container-F">
+            <div class="divForm">
+                <h1>Candidato a Emprego</h1>
+                <form action="form.php" autocomplete="off">
+                    <fieldset>
+                        <h3><label for="inome">Nome</label></h3>
+                        <div class="inputDiv">    
+                            <input name="nome" id="inome" type="text" placeholder="Primeiro nome:">
+                            <input name="sobrenome" id="inome" type="text" placeholder="Segundo nome:">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3><label for="inasc">Nascimento</label></h3>
+                        <div class="inputDiv">
+                            <input name="dataNasc" id="inasc" type="date">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3><label for="itell">Telefone</label></h3>
+                        <div class="inputDiv">
+                            <input name="telefone" id="itell" type="number" placeholder="Ex. (xx) xxxx-xxxx">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3><label for="iemail">E-mail</label></h3>
+                        <div class="inputDiv">
+                            <input name="email" id="iemail" type="email" placeholder="Ex. xxx@gmail.com">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3><label for="iendereco">Endereço</label></h3>
+                        <div class="inputDiv">
+                            <input name="Cidade" id="iendereco" type="text" placeholder="Cidade:">
+                            <input name="Rua" id="iendereco" type="text" placeholder="Rua:">
+                            <input name="Casa" id="iendereco" type="number" placeholder="N° Casa:">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3>Onde você ouviu sobre nós?</h3>
+                        <div class="inputBlock">
+                            <p><input type="checkbox">Mídia social</p>
+                            <p><input type="checkbox">Anúncio de jornal</p>
+                            <p><input type="checkbox">Anúncios digitais</p>
+                            <p><input type="checkbox">Outros</p>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3>Conte-nos sobre você</h3>
+                        <div class="inputDiv">
+                            <textarea></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="submit">
+                        <input type="submit" value="ENVIAR">
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </div>
 </body>
