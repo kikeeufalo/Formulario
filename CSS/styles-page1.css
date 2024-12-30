@@ -4,4 +4,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.container-titulo h1 {
+    font-weight: 400;
+    font-size: 34pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container-titulo p {
+    font-weight: 500;
+    font-family: serif;
+    font-size: 14pt;
 }
