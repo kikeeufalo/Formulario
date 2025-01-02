@@ -44,4 +44,9 @@
     border-bottom: 2px solid transparent;
     position: relative;
     padding: 5px;
+    transition:  0.4s;
+}
+
+.input-email:hover {
+    border-bottom: 1px solid;
 }
