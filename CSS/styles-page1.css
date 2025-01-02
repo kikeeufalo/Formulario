@@ -18,3 +18,12 @@
     font-family: serif;
     font-size: 14pt;
 }
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    margin: 10px;
+}
