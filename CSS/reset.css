@@ -4,3 +4,18 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,
+            #111625,
+            #192137,
+            #1e263d,
+            #1a2136
+            );
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-y: hidden;
+}
