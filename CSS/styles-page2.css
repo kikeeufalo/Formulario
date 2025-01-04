@@ -1,0 +1,44 @@
+.container {
+    background-color: rgba(255, 0, 0, 0.26);
+    position: relative;
+    max-width: 550px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.container-titulo {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+.container a {
+    position: absolute;
+    color: white;
+}
+
+.seta {
+    position: absolute;
+    padding: 4px;
+    box-shadow: 2px -2px 0 1px;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-135deg);
+}
+
+.container-titulo h1 {
+    font-weight: 400;
+    font-size: 34pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container-titulo p {
+    font-weight: 500;
+    font-family: serif;
+    font-size: 14pt;
+}
