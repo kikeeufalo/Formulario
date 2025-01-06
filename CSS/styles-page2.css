@@ -1,7 +1,8 @@
 .container {
+    max-width: 550px;
+    min-width: 450px;
     background-color: rgba(255, 0, 0, 0.26);
     position: relative;
-    max-width: 550px;
     height: auto;
     padding: 20px;
     margin: 0 auto;
@@ -41,4 +42,14 @@
     font-weight: 500;
     font-family: serif;
     font-size: 14pt;
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    margin: 0px 10px;
+    color: whitesmoke;
 }
