@@ -122,3 +122,11 @@ label p {
     background-color: #9d2053;
     color: wheat;
 }
+
+.button-criar button:hover {
+    cursor: pointer;
+    transition: 0.8s;
+    color: whitesmoke;
+    background-color: #801942;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+}
