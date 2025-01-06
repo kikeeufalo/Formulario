@@ -69,7 +69,7 @@ label p {
 
 .container-inputs input {
     color: whitesmoke;
-    padding: 7px;
+    padding: 8px;
     margin: 5px;
     width: 300pt;
     height: auto;
@@ -83,6 +83,15 @@ label p {
     transition:  0.4s;
     background-color: rgba(122, 30, 71, 0.2);
     border-radius: 3px;
+}
+
+.input-horizontal {
+    display: flex;
+    max-width: 410px;
+}
+
+.input-horizontal input {
+    max-width: 147pt;
 }
 
 .input-anim:hover {
@@ -99,4 +108,17 @@ label p {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px;
+}
+
+.button-criar button {
+    padding: 8px 0 8px 0;
+    width: 300pt;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    border: none;
+    background-color: #9d2053;
+    color: wheat;
 }
