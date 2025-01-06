@@ -114,7 +114,7 @@ label p {
     transition: 0.8s;
     color: whitesmoke;
     background-color: #801942;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.544);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container-rodape p {
