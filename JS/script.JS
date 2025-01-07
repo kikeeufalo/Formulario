@@ -1,3 +1,9 @@
+// Primeira página
+const enderecoEmail = document.querySelector('#input-id-email')
+const enderecoSenha = document.querySelector('#input-id-senha')
+
+
+
 // Segunda Pagina criação de contas
 const inputNome = document.querySelector('#nome')
 const inputEmail = document.querySelector('#email')
