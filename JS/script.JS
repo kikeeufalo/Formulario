@@ -28,6 +28,8 @@ buttonSubmit.addEventListener('click', function (e) {
     let caracteresSenha = inputSenha.value
     let caracterestell = inputTell.value
 
+
+    // verifica se algum input excedeu o limite de caracteres
     if (caracteresNome.length > maxCaracteres || caracteresEmail.length > maxCaracteres) {
         e.preventDefault()
         if (caracteresNome.length > caracteresEmail.length) {
@@ -48,6 +50,19 @@ buttonSubmit.addEventListener('click', function (e) {
         e.preventDefault()
         elementoResposta.style.display = 'block'
         elementoResposta.innerHTML = 'Telefone Invalido'
+        resetMessage()
+    } 
+
+    // verificando se há algum input vazio
+    if (
+        caracteresNome.length == '' ||
+        caracteresEmail.length == '' ||
+        caracteresSenha.length == '' ||
+        caracterestell.length == ''
+    ) {
+        e.preventDefault()
+        elementoResposta.style.display = 'block'
+        elementoResposta.innerHTML = 'Insira todos os dados'
         resetMessage()
     }
 })
