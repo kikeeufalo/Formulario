@@ -24,6 +24,7 @@
     margin-top: 20px;
 }
 
+
 .container-titulo h1 {
     font-weight: 400;
     font-size: 34pt;
@@ -37,6 +38,7 @@
 }
 
 .container-inputs {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +46,13 @@
     padding: 7px;
     margin: 0px 10px;
     color: whitesmoke;
+}
+
+.elemento-resposta-js {
+    position: absolute;
+    top: 25px;
+    display: none;
+    color: rgb(255, 128, 128);
 }
 
 label p {
