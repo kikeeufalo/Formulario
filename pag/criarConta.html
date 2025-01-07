@@ -22,6 +22,7 @@
                 <p>Crie sua conta aqui</p>
             </div>
             <div class="container-inputs">
+                <p id="elemento-resposta" class="elemento-resposta-js">----</p>
                 <label for="nome">
                     <p>Nome</p>
                     <input placeholder="Insira seu nome:" class="input-anim" id="nome" type="text">
@@ -37,12 +38,12 @@
                     </label>
                     <label for="telefone">
                         <p>Telefone</p>
-                        <input placeholder="Telefone:" class="input-anim" id="telefone" type="number">
+                        <input placeholder="Telefone:" class="input-anim" id="telefone" type="tel">
                     </label>
                 </div>
             </div>
             <div class="button-criar">
-                <button>Criar</button>
+                <button type="submit" id="submit">Criar</button>
             </div>
             <div class="rodape-midias">
                 <p>Entre com outras mídias</p>
@@ -66,6 +67,8 @@
             </div>
         </div>
     </form>
+
+    <script src="./../JS/script.JS"></script>
 </body>
 
 </html>
