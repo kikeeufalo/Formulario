@@ -3,7 +3,7 @@ const enderecoSenha = document.querySelector('#input-id-senha')
 const messageErro = document.querySelector('#mensagemP1')
 const buttonLogin = document.querySelector('#button-login')
 
-buttonLogin.addEventListener('click', function (e) {
+buttonLogin.addEventListener('click', function(e) {
     let caractereEnderocoEmail = enderecoEmail.value
     let caractereEnderecoSenha = enderecoSenha.value
 
