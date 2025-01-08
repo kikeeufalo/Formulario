@@ -20,19 +20,18 @@ buttonLogin.addEventListener('click', function (e) {
 
 // função para resetar as mensagens de erro
 function resetMessage() {
-    if (messageErro) {
-        setTimeout(() => {
-            let opacidade = 1
-            const intervalo = setInterval(() => {
-                messageErro.style.opacity = opacidade
-                opacidade -= 0.1
+    setTimeout(() => {
+        let opacidade = 1
+        const intervalo = setInterval(() => {
+            messageErro.style.opacity = opacidade
+            opacidade -= 0.1
 
-                if (opacidade <= 0) {
-                    messageErro.style.display = 'none'
-                    messageErro.style.opacity = '1'
-                    clearInterval(intervalo)
-                }
+            if (opacidade <= 0) {
+                messageErro.style.display = 'none'
+                messageErro.style.opacity = '1'
+                clearInterval(intervalo)
+            }
 
-            }, 50)
-        }, 2000)
-    }
+        }, 50)
+    }, 2000)
+}
