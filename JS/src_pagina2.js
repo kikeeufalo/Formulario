@@ -10,14 +10,10 @@ let maxSenha = 20 // Senha maxima 20
 let maxTell = 15 // Numero maximo permitido 15
 
 buttonSubmit.addEventListener('click', function (e) {
-    e.preventDefault()
-    console.log('foi')
-
     let caracteresNome = inputNome.value
     let caracteresEmail = inputEmail.value
     let caracteresSenha = inputSenha.value
     let caracterestell = inputTell.value
-
 
     // verifica se algum input excedeu o limite de caracteres
     if (caracteresNome.length > maxCaracteres || caracteresEmail.length > maxCaracteres) {
