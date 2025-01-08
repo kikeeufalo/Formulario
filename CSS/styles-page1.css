@@ -91,6 +91,12 @@ label p {
     border-bottom: 2px solid #7a1e47b5;
 }
 
+.reset-senha:hover {
+    transition: 0.5s;
+    color: #da518a;
+    text-shadow: 1px 1px 5px black;
+}
+
 .container-inputs a {
     color: whitesmoke;
     text-decoration: none;
