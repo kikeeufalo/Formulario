@@ -5,6 +5,9 @@ const inputTell = document.querySelector('#telefone')
 const buttonSubmit = document.querySelector('#submit')
 const elementoResposta = document.querySelector('#elemento-resposta')
 
+// boleano para verificar se pode chamar a função resetMessage
+let ver = true
+
 // limitador, Nome
 inputNome.addEventListener('input', function() {
     let limite = 4
@@ -12,7 +15,10 @@ inputNome.addEventListener('input', function() {
         inputNome.value = inputNome.value.slice(0, limite)
         elementoResposta.style.display = 'block'
         elementoResposta.innerHTML = 'Seu Nome está muito grande'
-        resetMessage()
+        if (ver) {
+            ver = false
+            resetMessage()
+        }
     }
 })
 
@@ -23,7 +29,10 @@ inputEmail.addEventListener('input', function() {
         inputEmail.value = inputEmail.value.slice(0, limite)
         elementoResposta.style.display = 'block'
         elementoResposta.innerHTML = 'Seu E-mail está muito grande'
-        resetMessage()
+        if (ver) {
+            ver = false
+            resetMessage()
+        }
     }
 })
 
@@ -34,7 +43,10 @@ inputSenha.addEventListener('input', function() {
         inputSenha.value = inputSenha.value.slice(0, limite)
         elementoResposta.style.display = 'block'
         elementoResposta.innerHTML = 'Sua Senha está muito grande'
-        resetMessage()
+        if (ver) {
+            ver = false
+            resetMessage()
+        }
     }
 })
 
@@ -97,6 +109,7 @@ function resetMessage() {
                 clearInterval(intervalo)
             }
 
+            ver = true
         }, 50)
     }, 2000)
 }
