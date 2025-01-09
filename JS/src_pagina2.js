@@ -2,11 +2,39 @@ const inputNome = document.querySelector('#nome')
 const inputEmail = document.querySelector('#email')
 const inputSenha = document.querySelector('#senha')
 const inputTell = document.querySelector('#telefone')
+const buttonSubmit = document.querySelector('#submit')
 const elementoResposta = document.querySelector('#elemento-resposta')
 
+// limitador, Nome
 inputNome.addEventListener('input', function() {
-    if (inputNome.value.length > 3) {
-        console.log('dd')
+    let limite = 4
+    if (inputNome.value.length > limite) {
+        inputNome.value = inputNome.value.slice(0, limite)
+        elementoResposta.style.display = 'block'
+        elementoResposta.innerHTML = 'Seu Nome está muito grande'
+        resetMessage()
+    }
+})
+
+// limitador, E-mail
+inputEmail.addEventListener('input', function() {
+    let limite = 100
+    if (inputEmail.value.length > limite) {
+        inputEmail.value = inputEmail.value.slice(0, limite)
+        elementoResposta.style.display = 'block'
+        elementoResposta.innerHTML = 'Seu E-mail está muito grande'
+        resetMessage()
+    }
+})
+
+// limitador, Senha
+inputSenha.addEventListener('input', function() {
+    let limite = 20
+    if (inputSenha.value.length > limite) {
+        inputSenha.value = inputSenha.value.slice(0, limite)
+        elementoResposta.style.display = 'block'
+        elementoResposta.innerHTML = 'Sua Senha está muito grande'
+        resetMessage()
     }
 })
 
@@ -40,8 +68,8 @@ inputTell.addEventListener('input', function(e) {
     e.target.value = value
 
     // Limitar o tamanho máximo
-    if (e.target.value.length > maxTell) {
-        e.target.value = e.target.value.slice(0, maxTell)
+    if (e.target.value.length > 15) {
+        e.target.value = e.target.value.slice(0, 15)
     }
 })
 
