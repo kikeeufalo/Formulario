@@ -76,9 +76,10 @@ label {
     transition:  0.4s;
     background-color: rgba(122, 30, 71, 0.2);
     border-radius: 3px;
-    max-width: 110px;
+    max-width: 115px;
     font-size: 31pt;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -113,6 +114,12 @@ input:focus {
     border-bottom: 2px solid #7a1e47b5;
 }
 
+.message {
+    position: absolute;
+    bottom: 45px;
+    display: none;
+    color: rgb(255, 128, 128);
+}
 
 button {
     padding: 8px 0 8px 0;

@@ -53,18 +53,35 @@ buttonSubmit.addEventListener('click', function (e) {
     }
 })
 
-inputTell.addEventListener('input', function (e) {
-    let value = e.target.value.replace(/\D/g, '');  // Remove tudo o que não for número
-    if (value.length <= 2) {
-        value = value.replace(/(\d{2})(\d{0,0})/, '($1) $2');
-    } else if (value.length <= 7) {
-        value = value.replace(/(\d{2})(\d{4})(\d{0,0})/, '($1) $2-$3')
+inputTell.addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '')  // Remove tudo que não for número
+
+    if (value.length <= 10) {
+        // Formato para telefones fixos: (XX) XXXX-XXXX
+        value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3')
     } else {
-        value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3')
+        // Formato para celulares: (XX) XXXXX-XXXX
+        value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3')
     }
+
+    // Aplica o valor formatado ao input
     e.target.value = value
+
+    // Limitar o tamanho máximo
+    if (e.target.value.length > maxTell) {
+        e.target.value = e.target.value.slice(0, maxTell)
+    }
 })
 
+// Permitir apagar os caracteres especiais
+inputTell.addEventListener('keydown', function(e) {
+    if (e.key === 'Backspace') {
+        let value = e.target.value
+        if (value.endsWith(' ') || value.endsWith('-') || value.endsWith(')')) {
+            e.target.value = value.slice(0, -1)  // Remove o último caractere especial
+        }
+    }
+})
 
 // função para resetar as mensagens de erro
 function resetMessage() {
@@ -83,3 +100,6 @@ function resetMessage() {
         }, 50)
     }, 2000)
 }
+
+// tirar as funçoes de verificar se escedeu o limite
+// trocar para um limite menor usando js

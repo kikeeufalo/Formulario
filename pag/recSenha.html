@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="#" method="post">
+        <form autocomplete="off" action="#" method="post">
             <a href="./../index.html">
                 <div style="margin-left: 10px;" class="seta"></div>
                 <div class="seta"></div>
@@ -24,7 +24,9 @@
                 <input class="input-email" placeholder="Insira seu E-mail" type="email" id="input-email">
 
                 <label for="input-cod">Insira o código</label>
-                <input placeholder=" ****" type="number" class="input-cod" id="input-cod">
+                <input placeholder="****" type="number" class="input-cod" id="input-cod">
+
+                <p id="message" class="message">---</p>
 
                 <button id="button-verific" type="submit">Verificar</button>
             </div>
