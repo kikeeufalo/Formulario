@@ -3,18 +3,29 @@ const inputCod = document.querySelector('#input-cod')
 const buttonVerific = document.querySelector('#button-verific')
 const message = document.querySelector('#message')
 
+let verific = true
+
+// verificador de caracteres do E-mail
+inputEmail.addEventListener('input', function() {
+    let ver = 100
+    if (inputEmail.value.length > ver) {
+        inputEmail.value = inputEmail.value.slice(0, ver)
+        message.style.display = 'block'
+        message.innerHTML = 'Insira um E-mail valido ou tente outro'
+        if (verific) {
+            verific = false
+            resetMessage()
+        }
+    }
+})
+
+// Verificador do código
 inputCod.addEventListener('input', function() {
     if (inputCod.value.length > 4) {
         inputCod.value = inputCod.value.slice(0, 4)
     }
 })
 
-inputEmail.addEventListener('input', function() {
-    let ver = 100
-    if (inputEmail.value.length > ver) {
-        inputEmail.value = inputEmail.value.slice(0, ver)
-    }
-})
 
 buttonVerific.addEventListener('click', function(e) {
     if (inputEmail.value.length == '') {
@@ -42,6 +53,8 @@ function resetMessage() {
                 message.style.opacity = '1'
                 clearInterval(intervalo)
             }
+
+            verific = true
 
         }, 50)
     }, 2000)
