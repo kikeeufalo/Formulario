@@ -9,6 +9,13 @@ inputCod.addEventListener('input', function() {
     }
 })
 
+inputEmail.addEventListener('input', function() {
+    let ver = 100
+    if (inputEmail.value.length > ver) {
+        inputEmail.value = inputEmail.value.slice(0, ver)
+    }
+})
+
 buttonVerific.addEventListener('click', function(e) {
     if (inputEmail.value.length == '') {
         e.preventDefault()
