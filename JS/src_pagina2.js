@@ -3,52 +3,24 @@ const inputEmail = document.querySelector('#email')
 const inputSenha = document.querySelector('#senha')
 const inputTell = document.querySelector('#telefone')
 const elementoResposta = document.querySelector('#elemento-resposta')
-const buttonSubmit = document.querySelector('#submit')
 
-let maxCaracteres = 100 // caracteres maximos 100
-let maxSenha = 20 // Senha maxima 20
-let maxTell = 15 // Numero maximo permitido 15
-
-buttonSubmit.addEventListener('click', function (e) {
-    let caracteresNome = inputNome.value
-    let caracteresEmail = inputEmail.value
-    let caracteresSenha = inputSenha.value
-    let caracterestell = inputTell.value
-
-    // verifica se algum input excedeu o limite de caracteres
-    if (caracteresNome.length > maxCaracteres || caracteresEmail.length > maxCaracteres) {
-        e.preventDefault()
-        if (caracteresNome.length > caracteresEmail.length) {
-            elementoResposta.style.display = 'block'
-            elementoResposta.innerHTML = `Nome muito grande`
-            resetMessage()
-        } else {
-            elementoResposta.style.display = 'block'
-            elementoResposta.innerHTML = `E-mail muito grande`
-            resetMessage()
-        }
-    } else if (caracteresSenha.length > maxSenha) {
-        e.preventDefault()
-        elementoResposta.style.display = 'block'
-        elementoResposta.innerHTML = 'Senha muito grande'
-        resetMessage()
-    } else if (caracterestell.length > maxTell) {
-        e.preventDefault()
-        elementoResposta.style.display = 'block'
-        elementoResposta.innerHTML = 'Telefone Invalido'
-        resetMessage()
+inputNome.addEventListener('input', function() {
+    if (inputNome.value.length > 3) {
+        console.log('dd')
     }
+})
 
+buttonSubmit.addEventListener('click', function(e) {
     // verificando se há algum input vazio
     if (
-        caracteresNome.length == '' ||
-        caracteresEmail.length == '' ||
-        caracteresSenha.length == '' ||
-        caracterestell.length == ''
+        inputNome.value.length == '' ||
+        inputEmail.value.length == '' ||
+        inputSenha.value.length == '' ||
+        inputTell.value.length == ''
     ) {
         e.preventDefault()
         elementoResposta.style.display = 'block'
-        elementoResposta.innerHTML = 'Insira todos os dados'
+        elementoResposta.innerHTML = 'Insira todos os dados.'
         resetMessage()
     }
 })
@@ -100,6 +72,3 @@ function resetMessage() {
         }, 50)
     }, 2000)
 }
-
-// tirar as funçoes de verificar se escedeu o limite
-// trocar para um limite menor usando js
