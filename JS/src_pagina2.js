@@ -10,7 +10,7 @@ let ver = true
 
 // limitador, Nome
 inputNome.addEventListener('input', function() {
-    let limite = 4
+    let limite = 100
     if (inputNome.value.length > limite) {
         inputNome.value = inputNome.value.slice(0, limite)
         elementoResposta.style.display = 'block'
