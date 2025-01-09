@@ -23,6 +23,13 @@ inputEmail.addEventListener('input', function() {
 inputCod.addEventListener('input', function() {
     if (inputCod.value.length > 4) {
         inputCod.value = inputCod.value.slice(0, 4)
+
+        message.style.display = 'block'
+        message.innerHTML = 'Apenas 4 (quatro) digitos'
+        if (verific) {
+            verific = false
+            resetMessage()
+        }
     }
 })
 
