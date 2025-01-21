@@ -44,6 +44,7 @@ form {
     font-weight: 500;
     font-family: serif;
     font-size: 14pt;
+    color: lightgray;
 }
 
 .container-inputs {
@@ -57,13 +58,18 @@ form {
     color: whitesmoke;
 }
 
+label:first-child{
+    width: 100%;
+    padding-left: 15px;
+}
+
 label {
     font-size: 12pt;
     font-weight: 300;
     font-family: helvetica;
     margin-top: 20px;
-    padding-left: 15px;
 }
+
 
 .input-cod {
     color: whitesmoke;
